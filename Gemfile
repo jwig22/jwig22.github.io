@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-#gem 'jekyll'
+gem 'jekyll'
 gem "github-pages", group: :jekyll_plugins
 
 
@@ -9,3 +9,5 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jemoji"
 end
+
+gem "webrick", "~> 1.8.1"
