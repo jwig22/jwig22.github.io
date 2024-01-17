@@ -68,17 +68,14 @@ Consider the questions in your PACE Strategy Document to reflect on the Plan sta
 For EDA of the data, import the data and packages that will be most helpful, such as pandas, numpy, and matplotlib.
 
 
-
-
-
-{% highlight python %}
+```python
 # Import libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import datetime as dt
-{% endhighlight %}
+```
 
 Read in the data and store it as a dataframe object called df.
 
