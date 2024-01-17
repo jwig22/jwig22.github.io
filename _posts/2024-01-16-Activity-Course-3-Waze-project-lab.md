@@ -111,7 +111,12 @@ df.head()
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: left;
-        overflow-x: scroll;
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .dataframe tbody tr th {
@@ -253,7 +258,13 @@ df.describe()
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
+        vertical-align: left;
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .dataframe tbody tr th {
@@ -429,17 +440,12 @@ df.info()
     memory usage: 1.5+ MB
 
 
-![image_title]({{site.baseurl}}/assets/img/Construct.png)
-
-## **PACE: Construct**
-
-Consider the questions in your PACE Strategy Document to reflect on the Construct stage.
-
 Consider the following questions as you prepare to deal with outliers:
 
 1.   What are some ways to identify outliers?
 2.   How do you make the decision to keep or exclude outliers from any future models?
 
+Answers:
 1. Checking Mins, Maxes, mean vs median, box plots, and other visualizations.
 2. By determining if it actually makes sense (input error vs anomaly).
 
@@ -1144,11 +1150,11 @@ def impute_95(column_name):
 ```
 
 Next, apply that function to the following columns:
-* `sessions`
-* `drives`
-* `total_sessions`
-* `driven_km_drives`
-* `duration_minutes_drives`
+* sessions
+* drives
+* total_sessions
+* driven_km_drives
+* duration_minutes_drives
 
 
 ``` python
@@ -1170,7 +1176,13 @@ df.describe()
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
+        vertical-align: left;
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .dataframe tbody tr th {
@@ -1343,11 +1355,6 @@ Perhaps you feel that the more deeply you explore the data, the more questions a
 
 Also, EDA has revealed that users who drive very long distances on their driving days are _more_ likely to churn, but users who drive more often are _less_ likely to churn. The reason for this discrepancy is an opportunity for further investigation, and it would be something else to ask the Waze data team about.
 
-![image_title]({{site.baseurl}}/assets/img/Execute.png)
-
-## **PACE: Execute**
-
-Consider the questions in your PACE Strategy Document to reflect on the Execute stage.
 
 ### **Task 4a. Results and evaluation**
 
@@ -1428,7 +1435,7 @@ Now that you've explored and visualized your data, the next step is to share you
 
 6. Did newer uses have greater representation in this dataset than users with longer tenure? How do you know?
 
-
+Answers:
 1. Mostly right tail skewed distributions, but some normal distributions of others. Normal driving habits (drive distance and drive times) are generally in shorter ranges tend to go together.
 2. The large amount of outliers and scatter plots indicate a major problem with this dataset.
 3. Yes. What the heck is going on with this dataset?
@@ -1436,6 +1443,3 @@ Now that you've explored and visualized your data, the next step is to share you
 5. Fewer driving days correlated with increased user churn. Longer drives also tended to correlate with increased churn.
 6. This dataset has about an equal representation among all tenure lengths due to the histogram of "n_days_after_onboarding" being a normal distribution.
 
-
-
-**Congratulations!** You've completed this lab. However, you may not notice a green check mark next to this item on Coursera's platform. Please continue your progress regardless of the check mark. Just click on the "save" icon at the top of this notebook to ensure your work has been logged.
