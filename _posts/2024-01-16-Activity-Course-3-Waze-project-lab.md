@@ -110,13 +110,7 @@ df.head()
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: left;
-        display: block;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        margin: 0 auto;
-        overflow-x: auto;
-        white-space: nowrap;
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
@@ -258,13 +252,7 @@ df.describe()
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: left;
-        display: block;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        margin: 0 auto;
-        overflow-x: auto;
-        white-space: nowrap;
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
@@ -1176,13 +1164,7 @@ df.describe()
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: left;
-        display: block;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        margin: 0 auto;
-        overflow-x: auto;
-        white-space: nowrap;
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {

@@ -70,6 +70,7 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  overflow-x: auto;
 }
 table td, table.blueTable th {
   border: 1px solid #aaa;
