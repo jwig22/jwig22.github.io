@@ -827,11 +827,6 @@ pre code {
 }
 
 table {
-  border: 1px solid #aaa;
-  background-color: #333030;
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
   display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
