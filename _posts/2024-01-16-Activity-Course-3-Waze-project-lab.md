@@ -118,13 +118,12 @@ df.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>ID</th>
       <th>label</th>
       <th>sessions</th>
@@ -142,7 +141,6 @@ df.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0</td>
       <td>retained</td>
       <td>283</td>
@@ -158,7 +156,6 @@ df.head()
       <td>Android</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>1</td>
       <td>retained</td>
       <td>133</td>
@@ -174,7 +171,6 @@ df.head()
       <td>iPhone</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>2</td>
       <td>retained</td>
       <td>114</td>
@@ -190,7 +186,6 @@ df.head()
       <td>Android</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>3</td>
       <td>retained</td>
       <td>49</td>
@@ -206,7 +201,6 @@ df.head()
       <td>iPhone</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>4</td>
       <td>retained</td>
       <td>84</td>
