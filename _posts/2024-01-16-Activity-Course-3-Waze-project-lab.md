@@ -13,9 +13,7 @@ Your team is still in the early stages of their user churn project. So far, youâ
 
 You check your inbox and notice a new message from Chidi Ga, your teamâ€™s Senior Data Analyst. Chidi is pleased with the work you have already completed and requests your assistance with exploratory data analysis (EDA) and further data visualization. Harriet Hadzic, Waze's Director of Data Analysis, will want to review a Python notebook that shows your data exploration and visualization.
 
-A notebook was structured and prepared to help you in this project. Please complete the following questions and prepare an executive summary.
-
-# **Course 3 End-of-course project: Exploratory data analysis**
+# **Exploratory data analysis**
 
 In this activity, you will examine data provided and prepare it for analysis.
 <br/>
@@ -40,28 +38,7 @@ In this activity, you will examine data provided and prepare it for analysis.
 
 <br/>
 
-
-Follow the instructions and answer the question below to complete the activity. Then, you will complete an executive summary using the questions listed on the [PACE Strategy Document ](https://docs.google.com/document/d/1iSHdbfQR6w8RClJNWai8oJXn9tQmYoTKn6QohuaK4-s/template/preview?resourcekey=0-ZIHnbxL1dd2u9A47iEVXvg).
-
-Be sure to complete this activity before moving on. The next course item will provide you with a completed exemplar to compare to your own work.
-
 # **Visualize a story in Python**
-
-![image_title]({{site.baseurl}}/assets/img/Pace.png)
-
-# **PACE stages**
-
-
-Throughout these project notebooks, you'll see references to the problem-solving framework PACE. The following notebook components are labeled with the respective PACE stage: Plan, Analyze, Construct, and Execute.
-
-![image_title]({{site.baseurl}}/assets/img/Plan.png)
-
-
-## **PACE: Plan**
-
-Consider the questions in your PACE Strategy Document to reflect on the Plan stage.
-
-
 
 ### **Task 1. Imports and data loading**
 
@@ -87,23 +64,17 @@ Read in the data and store it as a dataframe object called df.
 df = pd.read_csv('waze_dataset.csv')
 ```
 
-![image_title]({{site.baseurl}}/assets/img/Analyze.png)
-
-## **PACE: Analyze**
-
-Consider the questions in your PACE Strategy Document and those below where applicable to complete your code:
 1. Does the data need to be restructured or converted into usable formats?
 
 2. Are there any variables that have missing data?
 
-
+Answers:
 1. The data is in a useable format and does not need to be restructured.
 2. The labels variable is missing 700 values.
 
 ### **Task 2. Data exploration and cleaning**
 
 Consider the following questions:
-
 
 
 1.  Given the scenario, which data columns are most applicable?
@@ -114,14 +85,9 @@ Consider the following questions:
 
 4.  How would you check for outliers? And how would handle outliers (if any)?
 
-
-
-
-
-
-
+Answers:
 1. The most applicable data columns are label, sessions, drives, n_days_after_onboarding, driven_km_drives,duration_minutes_drives, activity_days, driving_days, and maybe device.
-2. The total_navigations_fav1/2 propbably aren't very useful.
+2. The total_navigations_fav1/2 propbably aren't very useful for right now.
 3. Using df.info() can indicated missing or null values. The missing data can either be removed, ignored, or filled in with estimates or calculated values.
 4. Using statistical analysis, outliers can be identified and determine if they are anomalies, errors, or something worth exploring further.
 
@@ -141,13 +107,11 @@ It's always helpful to have this information at the beginning of a project, wher
 df.head()
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
+        vertical-align: left;
+        overflow-x: scroll;
     }
 
     .dataframe tbody tr th {
