@@ -18,7 +18,7 @@ social-email: jwigington22@gmail.com # add your Email address
 #discus-identifier: # add your discus identifier
 
 # Tracker
-analytics: G-PVJ29CD7PQ # Google Analytics
+# analytics: G-PVJ29CD7PQ # Google Analytics
 
 # Build Settings
 markdown: kramdown
