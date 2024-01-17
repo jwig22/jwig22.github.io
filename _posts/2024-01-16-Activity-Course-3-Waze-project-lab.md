@@ -47,14 +47,14 @@ Be sure to complete this activity before moving on. The next course item will pr
 
 # **Visualize a story in Python**
 
-<img src="images/Pace.png" width="100" height="100" align=left>
+![image_title]({{site.baseurl}}/assets/img/Pace.png)
 
 # **PACE stages**
 
 
 Throughout these project notebooks, you'll see references to the problem-solving framework PACE. The following notebook components are labeled with the respective PACE stage: Plan, Analyze, Construct, and Execute.
 
-<img src="images/Plan.png" width="100" height="100" align=left>
+![image_title]({{site.baseurl}}/assets/img/Plan.png)
 
 
 ## **PACE: Plan**
@@ -90,7 +90,7 @@ Read in the data and store it as a dataframe object called df.
 df = pd.read_csv('waze_dataset.csv')
 ```
 
-<img src="images/Analyze.png" width="100" height="100" align=left>
+![image_title]({{site.baseurl}}/assets/img/Analyze.png)
 
 ## **PACE: Analyze**
 
@@ -468,7 +468,7 @@ df.info()
     memory usage: 1.5+ MB
 
 
-<img src="images/Construct.png" width="100" height="100" align=left>
+![image_title]({{site.baseurl}}/assets/img/Construct.png)
 
 ## **PACE: Construct**
 
@@ -524,7 +524,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_29_1.png)
+![png]({{site.baseurl}}/assets/img/output_29_1.png)
 
 
 
@@ -540,7 +540,7 @@ plt.title('sessions histogram plot');
 ```
 
 
-![png](output_30_0.png)
+![png]({{site.baseurl}}/assets/img/output_30_0.png)
 
 
 The `sessions` variable is a right-skewed distribution with half of the observations having 56 or fewer sessions. However, as indicated by the boxplot, some users have more than 700.
@@ -564,7 +564,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_33_1.png)
+![png]({{site.baseurl}}/assets/img/output_33_1.png)
 
 
 
@@ -592,7 +592,7 @@ histogrammer('drives')
 ```
 
 
-![png](output_35_0.png)
+![png]({{site.baseurl}}/assets/img/output_35_0.png)
 
 
 The `drives` information follows a distribution similar to the `sessions` variable. It is right-skewed, approximately log-normal, with a median of 48. However, some drivers had over 400 drives in the last month.
@@ -616,7 +616,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_38_1.png)
+![png]({{site.baseurl}}/assets/img/output_38_1.png)
 
 
 
@@ -626,7 +626,7 @@ histogrammer('total_sessions')
 ```
 
 
-![png](output_39_0.png)
+![png]({{site.baseurl}}/assets/img/output_39_0.png)
 
 
 The `total_sessions` is a right-skewed distribution. The median total number of sessions is 159.6. This is interesting information because, if the median number of sessions in the last month was 48 and the median total sessions was ~160, then it seems that a large proportion of a user's total drives might have taken place in the last month. This is something you can examine more closely later.
@@ -650,7 +650,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_42_1.png)
+![png]({{site.baseurl}}/assets/img/output_42_1.png)
 
 
 
@@ -663,7 +663,7 @@ histogrammer('n_days_after_onboarding',median_text=False)
 
 
 
-![png](output_43_1.png)
+![png]({{site.baseurl}}/assets/img/output_43_1.png)
 
 
 The total user tenure (i.e., number of days since
@@ -688,7 +688,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_46_1.png)
+![png]({{site.baseurl}}/assets/img/output_46_1.png)
 
 
 
@@ -698,7 +698,7 @@ histogrammer('driven_km_drives')
 ```
 
 
-![png](output_47_0.png)
+![png]({{site.baseurl}}/assets/img/output_47_0.png)
 
 
 The number of drives driven in the last month per user is a right-skewed distribution with half the users driving under 3,495 kilometers. As you discovered in the analysis from the previous course, the users in this dataset drive _a lot_. The longest distance driven in the month was over half the circumferene of the earth.
@@ -722,7 +722,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_50_1.png)
+![png]({{site.baseurl}}/assets/img/output_50_1.png)
 
 
 
@@ -732,7 +732,7 @@ histogrammer("duration_minutes_drives")
 ```
 
 
-![png](output_51_0.png)
+![png]({{site.baseurl}}/assets/img/output_51_0.png)
 
 
 The `duration_minutes_drives` variable has a heavily skewed right tail. Half of the users drove less than \~1,478 minutes (\~25 hours), but some users clocked over 250 hours over the month.
@@ -756,7 +756,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_54_1.png)
+![png]({{site.baseurl}}/assets/img/output_54_1.png)
 
 
 
@@ -769,7 +769,7 @@ histogrammer("activity_days", median_text=False, discrete=True)
 
 
 
-![png](output_55_1.png)
+![png]({{site.baseurl}}/assets/img/output_55_1.png)
 
 
 Within the last month, users opened the app a median of 16 times. The box plot reveals a centered distribution. The histogram shows a nearly uniform distribution of ~500 people opening the app on each count of days. However, there are ~250 people who didn't open the app at all and ~250 people who opened the app every day of the month.
@@ -795,7 +795,7 @@ sns.boxplot(data=df,
 
 
 
-![png](output_58_1.png)
+![png]({{site.baseurl}}/assets/img/output_58_1.png)
 
 
 
@@ -808,7 +808,7 @@ histogrammer('driving_days', median_text=False, discrete=True)
 
 
 
-![png](output_59_1.png)
+![png]({{site.baseurl}}/assets/img/output_59_1.png)
 
 
 The number of days users drove each month is almost uniform, and it largely correlates with the number of days they opened the app that month, except the `driving_days` distribution tails off on the right.
@@ -833,7 +833,7 @@ plt.show()
 ```
 
 
-![png](output_62_0.png)
+![png]({{site.baseurl}}/assets/img/output_62_0.png)
 
 
 There are nearly twice as many iPhone users as Android users represented in this data.
@@ -856,7 +856,7 @@ plt.show()
 ```
 
 
-![png](output_65_0.png)
+![png]({{site.baseurl}}/assets/img/output_65_0.png)
 
 
 Less than 18% of the users churned.
@@ -886,7 +886,7 @@ sns.histplot([df.driving_days, df.activity_days],
 
 
 
-![png](output_68_1.png)
+![png]({{site.baseurl}}/assets/img/output_68_1.png)
 
 
 As observed previously, this might seem counterintuitive. After all, why are there _fewer_ people who didn't use the app at all during the month and _more_ people who didn't drive at all during the month?
@@ -930,7 +930,7 @@ plt.plot([0,31],[0,31],color='red')
 
 
 
-![png](output_72_1.png)
+![png]({{site.baseurl}}/assets/img/output_72_1.png)
 
 
 Notice that there is a theoretical limit. If you use the app to drive, then by definition it must count as a day-use as well. In other words, you cannot have more drive-days than activity-days. None of the samples in this data violate this rule, which is good.
@@ -958,7 +958,7 @@ sns.histplot(data=df,
 
 
 
-![png](output_75_1.png)
+![png]({{site.baseurl}}/assets/img/output_75_1.png)
 
 
 The proportion of churned users to retained users is consistent between device types.
@@ -1048,7 +1048,7 @@ sns.histplot(data=df,
 
 
 
-![png](output_82_1.png)
+![png]({{site.baseurl}}/assets/img/output_82_1.png)
 
 
 The churn rate tends to increase as the mean daily distance driven increases, confirming what was found in the previous course. It would be worth investigating further the reasons for long-distance users to discontinue using the app.
@@ -1076,7 +1076,7 @@ sns.histplot(df,
 
 
 
-![png](output_85_1.png)
+![png]({{site.baseurl}}/assets/img/output_85_1.png)
 
 
 The churn rate is highest for people who didn't use Waze much during the last month. The more times they used the app, the less likely they were to churn. While 40% of the users who didn't use the app at all last month churned, nobody who used the app 30 days churned.
@@ -1121,7 +1121,7 @@ histogrammer('percent_sessions_in_last_month',
 
 
 
-![png](output_92_1.png)
+![png]({{site.baseurl}}/assets/img/output_92_1.png)
 
 
 Check the median value of the `n_days_after_onboarding` variable.
@@ -1159,7 +1159,7 @@ plt.title('N Days after Onboarding\n(only users with 40% or greater session in t
 
 
 
-![png](output_96_1.png)
+![png]({{site.baseurl}}/assets/img/output_96_1.png)
 
 
 The number of days since onboarding for users with 40% or more of their total sessions occurring in just the last month is a uniform distribution. This is very strange. It's worth asking Waze why so many long-time users suddenly used the app so much in the last month.
@@ -1382,7 +1382,7 @@ Perhaps you feel that the more deeply you explore the data, the more questions a
 
 Also, EDA has revealed that users who drive very long distances on their driving days are _more_ likely to churn, but users who drive more often are _less_ likely to churn. The reason for this discrepancy is an opportunity for further investigation, and it would be something else to ask the Waze data team about.
 
-<img src="images/Execute.png" width="100" height="100" align=left>
+![image_title]({{site.baseurl}}/assets/img/Execute.png)
 
 ## **PACE: Execute**
 
@@ -1427,7 +1427,7 @@ sns.scatterplot(data=df,
 
 
 
-![png](output_109_1.png)
+![png]({{site.baseurl}}/assets/img/output_109_1.png)
 
 
 
@@ -1446,7 +1446,7 @@ sns.scatterplot(data=df,
 
 
 
-![png](output_110_1.png)
+![png]({{site.baseurl}}/assets/img/output_110_1.png)
 
 
 ### **Task 4b. Conclusion**
