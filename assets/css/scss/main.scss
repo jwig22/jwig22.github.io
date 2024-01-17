@@ -66,11 +66,16 @@ pre {
 
 table {
   border: 1px solid #aaa;
-  background-color: $dark;
-  width: 100%;
+  background-color: #333030;
   text-align: left;
   border-collapse: collapse;
-  overflow-x: scroll;
+  display: block;
+  width: 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 table td, table.blueTable th {

@@ -832,6 +832,7 @@ table {
   text-align: left;
   border-collapse: collapse;
   display: block;
+  width: 100%;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
