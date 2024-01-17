@@ -70,8 +70,12 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  display: block;
+  margin: 0 auto;
   overflow-x: auto;
+  white-space: nowrap;
 }
+
 table td, table.blueTable th {
   border: 1px solid #aaa;
   padding: 3px 2px;
