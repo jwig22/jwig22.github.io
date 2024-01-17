@@ -70,6 +70,7 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 table td, table.blueTable th {
@@ -80,10 +81,10 @@ table tbody td {
   font-size: 13px;
 }
 table tr:nth-child(even) {
-  background: #adbecc;
+  background: #403f3f;
 }
 table thead {
-  background: #a9c4d1;
+  background: #403f3f;
   background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
   border-bottom: 1px solid #8c8c8c;
 }
