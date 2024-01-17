@@ -842,14 +842,20 @@ table td, table.blueTable th {
 
 table tbody td {
   font-size: 13px;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 table tr:nth-child(even) {
-  background: #adbecc;
+  background: #333030;
 }
 
 table thead {
-  background: #a9c4d1;
+  background: #6a787f;
   background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1));
   background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
   background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
