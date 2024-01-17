@@ -108,22 +108,9 @@ df.head()
 ```
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-</style>
-<table border="1" class="dataframe">
+<table border="1">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th>ID</th>
       <th>label</th>
       <th>sessions</th>
