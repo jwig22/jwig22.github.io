@@ -68,7 +68,7 @@ Consider the questions in your PACE Strategy Document to reflect on the Plan sta
 For EDA of the data, import the data and packages that will be most helpful, such as pandas, numpy, and matplotlib.
 
 
-```python
+``` python
 # Import libraries
 import pandas as pd
 import numpy as np
@@ -82,10 +82,10 @@ Read in the data and store it as a dataframe object called df.
 **Note:** As shown in this cell, the dataset has been automatically loaded in for you. You do not need to download the .csv file, or provide more code, in order to access the dataset and proceed with this lab. Please continue with this activity by completing the following instructions.
 
 
-{% highlight python %}
+``` python
 # Load the dataset into a dataframe
 df = pd.read_csv('waze_dataset.csv')
-{% endhighlight %}
+```
 
 ![image_title]({{site.baseurl}}/assets/img/Analyze.png)
 
@@ -129,17 +129,17 @@ Consider the following questions:
 
 Use the following methods and attributes on the dataframe:
 
-* `head()`
-* `size`
-* `describe()`
-* `info()`
+* head()
+* size
+* describe()
+* info()
 
 It's always helpful to have this information at the beginning of a project, where you can always refer back to if needed.
 
 
-{% highlight python %}
+``` python
 df.head()
-{% endhighlight %}
+```
 
 
 
@@ -265,9 +265,9 @@ df.head()
 
 
 
-{% highlight python %}
+``` python
 df.size
-{% endhighlight %}
+```
 
 
 
@@ -279,9 +279,9 @@ df.size
 Generate summary statistics using the `describe()` method.
 
 
-{% highlight python %}
+``` python
 df.describe()
-{% endhighlight %}
+```
 
 
 
@@ -439,9 +439,9 @@ df.describe()
 And summary information using the `info()` method.
 
 
-{% highlight python %}
+``` python
 df.info()
-{% endhighlight %}
+```
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 14999 entries, 0 to 14998
@@ -506,12 +506,12 @@ Begin by examining the spread and distribution of important variables using box 
 _The number of occurrence of a user opening the app during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="sessions")
 
-{% endhighlight %}
+```
 
 
 
@@ -525,7 +525,7 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 sns.histplot(data=df,
             x="sessions",
@@ -534,7 +534,7 @@ median = df['sessions'].median()
 plt.axvline(median, color='red', linestyle='--')
 plt.text(75,1200, 'median=56.0', color='red')
 plt.title('sessions histogram plot');
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_30_0.png)
@@ -547,11 +547,11 @@ The `sessions` variable is a right-skewed distribution with half of the observat
 _An occurrence of driving at least 1 km during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="drives")
-{% endhighlight %}
+```
 
 
 
@@ -565,7 +565,7 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Helper function to plot histograms based on the
 # format of the `sessions` histogram
 def histogrammer(column_str, median_text=True, **kwargs):    # **kwargs = any keyword arguments
@@ -580,13 +580,13 @@ def histogrammer(column_str, median_text=True, **kwargs):    # **kwargs = any ke
     else:
         print('Median:', median)
     plt.title(f'{column_str} histogram');
-{% endhighlight %}
+```
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('drives')
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_35_0.png)
@@ -599,11 +599,11 @@ The `drives` information follows a distribution similar to the `sessions` variab
 _A model estimate of the total number of sessions since a user has onboarded_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="total_sessions")
-{% endhighlight %}
+```
 
 
 
@@ -617,10 +617,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('total_sessions')
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_39_0.png)
@@ -633,11 +633,11 @@ The `total_sessions` is a right-skewed distribution. The median total number of 
 _The number of days since a user signed up for the app_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="n_days_after_onboarding")
-{% endhighlight %}
+```
 
 
 
@@ -651,10 +651,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('n_days_after_onboarding',median_text=False)
-{% endhighlight %}
+```
 
     Median: 1741.0
 
@@ -671,11 +671,11 @@ onboarding) is a uniform distribution with values ranging from near-zero to \~3,
 _Total kilometers driven during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="driven_km_drives")
-{% endhighlight %}
+```
 
 
 
@@ -689,10 +689,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('driven_km_drives')
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_47_0.png)
@@ -705,11 +705,11 @@ The number of drives driven in the last month per user is a right-skewed distrib
 _Total duration driven in minutes during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="duration_minutes_drives")
-{% endhighlight %}
+```
 
 
 
@@ -723,10 +723,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer("duration_minutes_drives")
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_51_0.png)
@@ -739,11 +739,11 @@ The `duration_minutes_drives` variable has a heavily skewed right tail. Half of 
 _Number of days the user opens the app during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="activity_days")
-{% endhighlight %}
+```
 
 
 
@@ -757,10 +757,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer("activity_days", median_text=False, discrete=True)
-{% endhighlight %}
+```
 
     Median: 16.0
 
@@ -778,11 +778,11 @@ This distribution is noteworthy because it does not mirror the `sessions` distri
 _Number of days the user drives (at least 1 km) during the month_
 
 
-{% highlight python %}
+``` python
 # Box plot
 sns.boxplot(data=df,
            y="driving_days")
-{% endhighlight %}
+```
 
 
 
@@ -796,10 +796,10 @@ sns.boxplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('driving_days', median_text=False, discrete=True)
-{% endhighlight %}
+```
 
     Median: 12.0
 
@@ -819,7 +819,7 @@ _The type of device a user starts a session with_
 This is a categorical variable, so you do not plot a box plot for it. A good plot for a binary categorical variable is a pie chart.
 
 
-{% highlight python %}
+``` python
 # Pie chart
 fig, ax = plt.subplots()
 
@@ -827,7 +827,7 @@ df.groupby('device').size().plot(kind='pie',autopct='%1.0f%%',colors=['green','g
 ax.set_title('% Users by device type',size=18)
 ax.set_ylabel('')
 plt.show()
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_62_0.png)
@@ -842,7 +842,7 @@ _Binary target variable (“retained” vs “churned”) for if a user has chur
 This is also a categorical variable, and as such would not be plotted as a box plot. Plot a pie chart instead.
 
 
-{% highlight python %}
+``` python
 # Pie chart
 fig, ax = plt.subplots()
 
@@ -850,7 +850,7 @@ df.groupby('label').size().plot(kind='pie',autopct='%1.0f%%',colors=['tab:orange
 ax.set_title('% Users Churned',size=18)
 ax.set_ylabel('')
 plt.show()
-{% endhighlight %}
+```
 
 
 ![png]({{site.baseurl}}/assets/img/output_65_0.png)
@@ -865,7 +865,7 @@ Because both `driving_days` and `activity_days` represent counts of days over a 
 Plot a histogram that, for each day, has a bar representing the counts of `driving_days` and `activity_days`.
 
 
-{% highlight python %}
+``` python
 # Histogram
 plt.figure(figsize=(10,6))
 sns.histplot([df.driving_days, df.activity_days], 
@@ -873,7 +873,7 @@ sns.histplot([df.driving_days, df.activity_days],
              bins=range(0,33),
              multiple='dodge',
              shrink=.8)
-{% endhighlight %}
+```
 
 
 
@@ -895,10 +895,10 @@ Nonetheless, it might be worthwile to contact the data team at Waze to get more 
 Confirm the maximum number of days for each variable&mdash;`driving_days` and `activity_days`.
 
 
-{% highlight python %}
+``` python
 ### YOUR CODE HERE ###
 print('Max Driving Days: ',df.driving_days.max(),'\nMax Activity Days: ',df.activity_days.max())
-{% endhighlight %}
+```
 
     Max Driving Days:  30 
     Max Activity Days:  31
@@ -909,7 +909,7 @@ It's true. Although it's possible that not a single user drove all 31 days of th
 One other way to check the validity of these variables is to plot a simple scatter plot with the x-axis representing one variable and the y-axis representing the other.
 
 
-{% highlight python %}
+``` python
 # Scatter plot
 plt.figure(figsize=(10,6))
 sns.scatterplot(data=df,
@@ -917,7 +917,7 @@ sns.scatterplot(data=df,
                 y='activity_days')
 plt.title('driving_days vs activity_days')
 plt.plot([0,31],[0,31],color='red')
-{% endhighlight %}
+```
 
 
 
@@ -937,7 +937,7 @@ Notice that there is a theoretical limit. If you use the app to drive, then by d
 Plot a histogram that has four bars&mdash;one for each device-label combination&mdash;to show how many iPhone users were retained/churned and how many Android users were retained/churned.
 
 
-{% highlight python %}
+``` python
 # Histogram
 plt.figure(figsize=(5,4))
 sns.histplot(data=df,
@@ -945,7 +945,7 @@ sns.histplot(data=df,
              hue='label',
              multiple='dodge',
             shrink=0.9)
-{% endhighlight %}
+```
 
 
 
@@ -969,12 +969,12 @@ In the previous course, you discovered that the median distance driven last mont
 2. Call the `describe()` method on the new column.
 
 
-{% highlight python %}
+``` python
 # 1. Create `km_per_driving_day` column
 df['km_per_driving_day'] = (df.driven_km_drives / df.driving_days).round(3)
 # 2. Call `describe()` on the new column
 df['km_per_driving_day'].describe().round(2)
-{% endhighlight %}
+```
 
 
 
@@ -1000,12 +1000,12 @@ This is the result of there being values of zero in the `driving_days` column. P
 2. Call `describe()` on the `km_per_driving_day` column to verify that it worked.
 
 
-{% highlight python %}
+``` python
 # 1. Convert infinite values to zero
 df.km_per_driving_day = df.km_per_driving_day.replace(to_replace=np.inf,value=0)
 # 2. Confirm that it worked
 df.km_per_driving_day.describe().round(2)
-{% endhighlight %}
+```
 
 
 
@@ -1027,7 +1027,7 @@ The maximum value is 15,420 kilometers _per drive day_. This is physically impos
 Plot a histogram of the new `km_per_driving_day` column, disregarding those users with values greater than 1,200 km. Each bar should be the same length and have two colors, one color representing the percent of the users in that bar that churned and the other representing the percent that were retained. This can be done by setting the `multiple` parameter of seaborn's [`histplot()`](https://seaborn.pydata.org/generated/seaborn.histplot.html) function to `fill`.
 
 
-{% highlight python %}
+``` python
 # Histogram
 plt.figure(figsize=(10,6))
 sns.histplot(data=df,
@@ -1035,7 +1035,7 @@ sns.histplot(data=df,
              bins=range(0,1201,20),
              hue='label',
              multiple='fill')
-{% endhighlight %}
+```
 
 
 
@@ -1055,7 +1055,7 @@ The churn rate tends to increase as the mean daily distance driven increases, co
 Create another histogram just like the previous one, only this time it should represent the churn rate for each number of driving days.
 
 
-{% highlight python %}
+``` python
 # Histogram
 plt.figure(figsize=(10,6))
 sns.histplot(df, 
@@ -1063,7 +1063,7 @@ sns.histplot(df,
              hue='label',
              multiple='fill',
              discrete=True)
-{% endhighlight %}
+```
 
 
 
@@ -1085,16 +1085,16 @@ This isn't surprising. If people who used the app a lot churned, it would likely
 Create a new column `percent_sessions_in_last_month` that represents the percentage of each user's total sessions that were logged in their last month of use.
 
 
-{% highlight python %}
+``` python
 df['percent_sessions_in_last_month'] = (df.sessions / df.total_sessions * 100).round(2)
-{% endhighlight %}
+```
 
 What is the median value of the new column?
 
 
-{% highlight python %}
+``` python
 df.percent_sessions_in_last_month.median()
-{% endhighlight %}
+```
 
 
 
@@ -1106,13 +1106,13 @@ df.percent_sessions_in_last_month.median()
 Now, create a histogram depicting the distribution of values in this new column.
 
 
-{% highlight python %}
+``` python
 # Histogram
 histogrammer('percent_sessions_in_last_month',
             hue=df['label'],
             multiple='layer',
             median_text=False)
-{% endhighlight %}
+```
 
     Median: 42.3
 
@@ -1124,9 +1124,9 @@ histogrammer('percent_sessions_in_last_month',
 Check the median value of the `n_days_after_onboarding` variable.
 
 
-{% highlight python %}
+``` python
 df.n_days_after_onboarding.median()
-{% endhighlight %}
+```
 
 
 
@@ -1140,13 +1140,13 @@ Half of the people in the dataset had 40% or more of their sessions in just the 
 Make a histogram of `n_days_after_onboarding` for just the people who had 40% or more of their total sessions in the last month.
 
 
-{% highlight python %}
+``` python
 # Histogram
 plt.figure(figsize=(5,3))
 sns.histplot(data=df[df['percent_sessions_in_last_month']>=40],
             x='n_days_after_onboarding')
 plt.title('N Days after Onboarding\n(only users with 40% or greater session in the last month)')
-{% endhighlight %}
+```
 
 
 
@@ -1172,12 +1172,12 @@ To practice this technique, write a function that calculates the 95th percentile
 
 
 
-{% highlight python %}
+``` python
 def impute_95(column_name):
     qnt_95 = column_name.quantile(q=.95)
     col_name_95 = column_name.mask(column_name > qnt_95,qnt_95,inplace=False)
     return col_name_95
-{% endhighlight %}
+```
 
 Next, apply that function to the following columns:
 * `sessions`
@@ -1187,18 +1187,18 @@ Next, apply that function to the following columns:
 * `duration_minutes_drives`
 
 
-{% highlight python %}
+``` python
 col_list = ['sessions','drives','total_sessions','driven_km_drives','duration_minutes_drives']
 for col in col_list:
     df[col] = impute_95(df[col])
-{% endhighlight %}
+```
 
 Call `describe()` to see if your change worked.
 
 
-{% highlight python %}
+``` python
 df.describe()
-{% endhighlight %}
+```
 
 
 
@@ -1409,12 +1409,12 @@ My client would likely want to know
 Use the following two code blocks (add more blocks if you like) to do additional EDA you feel is important based on the given scenario.
 
 
-{% highlight python %}
+``` python
 plt.figure(figsize=(4,3))
 sns.scatterplot(data=df,
            x=df['duration_minutes_drives'].mask(df['duration_minutes_drives']>2000),
            y=df['driven_km_drives'].mask(df['duration_minutes_drives']>2000))
-{% endhighlight %}
+```
 
 
 
@@ -1428,12 +1428,12 @@ sns.scatterplot(data=df,
 
 
 
-{% highlight python %}
+``` python
 plt.figure(figsize=(10,6))
 sns.scatterplot(data=df,
            x='activity_days',
            y='driven_km_drives')
-{% endhighlight %}
+```
 
 
 
