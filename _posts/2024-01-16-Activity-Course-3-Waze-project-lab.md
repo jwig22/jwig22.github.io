@@ -3,7 +3,7 @@ layout: post
 title: "Waze EDA Python Project"
 date: 2024-01-15 13:32:20 +0300
 description: Waze EDA using Python with Pandas, Matplotlib, and Seaborn in a Jupyter Notebook.
-img:  # Add image post (optional)
+img: output_65_0.png # Add image post (optional)
 ---
 
 # **Waze Project**
