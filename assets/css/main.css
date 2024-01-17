@@ -980,7 +980,7 @@ table tfoot td {
   padding-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #7a7575;
+  color: #929292;
   font-weight: 700;
 }
 
@@ -1169,7 +1169,7 @@ footer .copyright {
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
-  color: #263959;
+  color: #929292;
 }
 
 .post .post-content p {
