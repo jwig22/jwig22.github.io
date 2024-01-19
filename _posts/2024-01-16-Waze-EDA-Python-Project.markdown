@@ -106,7 +106,8 @@ It's always helpful to have this information at the beginning of a project, wher
 ``` python
 df.head()
 ```
-<table overflow: auto>
+<div class="scrollwrapper">
+<table>
   <thead>
     <tr>
       <th>ID</th>

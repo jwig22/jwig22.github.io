@@ -839,6 +839,10 @@ table {
   white-space: nowrap;
 }
 
+.scrollwrapper {
+  overflow: auto;
+}
+
 table td, table.blueTable th {
   border: 1px solid #aaa;
   padding: 3px 2px;
