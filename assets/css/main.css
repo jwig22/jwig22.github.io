@@ -270,6 +270,7 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
   /* 2 */
 }
@@ -368,6 +369,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -810,7 +812,7 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow: auto;
+  overflow: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -820,7 +822,7 @@ pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  overflow: auto;
+  overflow: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -832,6 +834,7 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 table td, table.blueTable th {
@@ -885,7 +888,7 @@ table tfoot td {
 
 .wrapper {
   max-width: 1250px;
-  position: relative;
+  position: left;
 }
 
 .post, .article-page {
