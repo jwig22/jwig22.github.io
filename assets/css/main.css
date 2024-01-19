@@ -948,7 +948,7 @@ table tfoot td {
   margin: 0 auto 10px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: #333030;
 }
 
@@ -1224,7 +1224,7 @@ a.newer-posts:hover {
   margin: 0;
   max-height: 500px;
   background-color: #333030;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .page-cover-image figure {
