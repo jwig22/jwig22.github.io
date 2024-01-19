@@ -810,7 +810,7 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow: auto;
+  overflow-y: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -820,7 +820,7 @@ pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  overflow: auto;
+  overflow-y: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -1121,7 +1121,7 @@ footer .copyright {
   min-height: 11rem;
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  overflow: auto;
+  overflow-y: auto;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
