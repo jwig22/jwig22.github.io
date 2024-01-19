@@ -106,7 +106,8 @@ It's always helpful to have this information at the beginning of a project, wher
 ``` python
 df.head()
 ```
-
+<div>
+<table >
 | ID | label    | sessions | drives | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days | device  |
 |----|----------|----------|--------|----------------|-------------------------|------------------------|------------------------|------------------|-------------------------|---------------|--------------|---------|
 | 0  | retained | 283      | 226    | 296.748273     | 2276                    | 208                    | 0                      | 2628.845068      | 1985.775061             | 28            | 19           | Android |
@@ -139,8 +140,7 @@ df.describe()
 
 
 
-
-| ID    | sessions     | drives       | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days |
+| | ID    | sessions     | drives       | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days |
 |-------|--------------|--------------|----------------|-------------------------|------------------------|------------------------|------------------|-------------------------|---------------|--------------|
 | count | 14999.000000 | 14999.000000 | 14999.000000   | 14999.000000            | 14999.000000           | 14999.000000           | 14999.000000     | 14999.000000            | 14999.000000  | 14999.000000 | 14999.000000 |
 | mean  | 7499.000000  | 80.633776    | 67.281152      | 189.964447              | 1749.837789            | 121.605974             | 29.672512        | 4039.340921             | 1860.976012   | 15.537102    | 12.179879    |
@@ -916,7 +916,7 @@ df.describe()
 
 
 
-| ID    | sessions     | drives       | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days | km_per_driving_day | percent_sessions_in_last_month |
+|  | ID    | sessions     | drives       | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days | km_per_driving_day | percent_sessions_in_last_month |
 |-------|--------------|--------------|----------------|-------------------------|------------------------|------------------------|------------------|-------------------------|---------------|--------------|--------------------|--------------------------------|
 | count | 14999.000000 | 14999.000000 | 14999.000000   | 14999.000000            | 14999.000000           | 14999.000000           | 14999.000000     | 14999.000000            | 14999.000000  | 14999.000000 | 14999.000000       | 14999.000000                   | 14999.000000 |
 | mean  | 7499.000000  | 76.568705    | 64.058204      | 184.031320              | 1749.837789            | 121.605974             | 29.672512        | 3939.632764             | 1789.647426   | 15.537102    | 12.179879          | 578.963120                     | 44.925552    |
