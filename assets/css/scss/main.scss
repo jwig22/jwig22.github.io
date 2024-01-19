@@ -67,9 +67,12 @@ pre {
 table {
   border: 1px solid #aaa;
   background-color: #eee;
-  width: 100%;
   text-align: left;
-  border-collapse: collapse;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 table td, table.blueTable th {
   border: 1px solid #aaa;

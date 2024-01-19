@@ -836,7 +836,8 @@ table {
   max-width: 100%;
   margin: 0 auto;
   overflow-x: scroll;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 table td, table.blueTable th {
   border: 1px solid #aaa;
