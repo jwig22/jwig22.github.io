@@ -7,7 +7,7 @@ img: output_65_0.png # Add image post (optional)
 ---
 
 # **Waze Project**
-**Course 3 - Go Beyond the Numbers: Translate Data into Insights**
+**Google Advanced Data Analytics Course (Python EDA)**
 
 Your team is still in the early stages of their user churn project. So far, you’ve completed a project proposal and used Python to inspect and organize Waze’s user data.
 

@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "Who's Riding That Bike?"
+title: "Who's Riding That Bike? (Tableau)"
 date: 2022-12-28 19:32:20
 description: Membership analysis for Cyclistic bikes in Chicago, IL for Google Data Analytics Certificate.
 img: cyclistic-cover-photo3.png # Add image post (optional)
 ---
+
+Google Data Analytics Certificate Capstone Project in Tableau.
+
 Note: Here is the link to the Tableau workbook I used to explore this data. [**TABLEAU WORKBOOK LINK**][tableau-link]
  You can use it to explore any of the visuals in greater depth.
 
