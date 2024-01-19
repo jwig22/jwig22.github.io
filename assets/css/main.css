@@ -437,7 +437,7 @@ template {
 }
 
 .highlight {
-  background-color: #faf9f900;
+  background-color: #faf9f9;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   margin: 0;
@@ -774,8 +774,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #fafafa;
-  background-color: #333030;
+  color: #515151;
+  background-color: #fbfbfb;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -810,7 +810,7 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow-y: auto;
+  overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -820,7 +820,7 @@ pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  overflow-y: auto;
+  overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
@@ -828,15 +828,10 @@ pre code {
 
 table {
   border: 1px solid #aaa;
-  background-color: #333030;
+  background-color: #eee;
+  width: 100%;
   text-align: left;
   border-collapse: collapse;
-  display: block;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  margin: 0 auto;
-  overflow-x: auto;
-  white-space: nowrap;
 }
 
 table td, table.blueTable th {
@@ -849,11 +844,15 @@ table tbody td {
 }
 
 table tr:nth-child(even) {
-  background: #333030;
+  background: #adbecc;
 }
 
 table thead {
-  background: #403f3f;
+  background: #a9c4d1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1));
+  background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
   border-bottom: 1px solid #8c8c8c;
 }
 
@@ -885,12 +884,12 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 900px;
+  max-width: 1250px;
   position: relative;
 }
 
 .post, .article-page {
-  background-color: #333030;
+  background-color: #fff;
 }
 
 ::-moz-selection {
@@ -934,7 +933,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #333030;
+  background-color: #ffffff;
 }
 
 .about {
@@ -976,7 +975,7 @@ table tfoot td {
   padding-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #929292;
+  color: #333030;
   font-weight: 700;
 }
 
@@ -993,7 +992,7 @@ table tfoot td {
   height: 7px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
-  background-color: #fafafa;
+  background-color: #515151;
 }
 
 .about p {
@@ -1024,7 +1023,7 @@ table tfoot td {
 
 .contact .contact-title {
   position: relative;
-  color: #ffffff;
+  color: #333030;
   font-weight: 400;
   font-size: 12px;
   margin: 0 0 5px;
@@ -1044,7 +1043,7 @@ table tfoot td {
   position: absolute;
   top: 50%;
   left: 0;
-  background-color: #fafafa;
+  background-color: #515151;
 }
 
 .contact .contact-title::after {
@@ -1059,7 +1058,7 @@ table tfoot td {
   position: absolute;
   top: 50%;
   right: 0;
-  background-color: #fafafa;
+  background-color: #515151;
 }
 
 .contact ul {
@@ -1079,7 +1078,7 @@ table tfoot td {
 }
 
 .contact ul li a {
-  color: #ffffff;
+  color: #515151;
   display: block;
   padding: 5px;
   font-size: 18px;
@@ -1089,7 +1088,7 @@ table tfoot td {
 }
 
 .contact ul li a:hover {
-  color: #bebebe;
+  color: #333030;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -1121,7 +1120,7 @@ footer .copyright {
   min-height: 11rem;
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  overflow-y: auto;
+  overflow: hidden;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
@@ -1165,7 +1164,7 @@ footer .copyright {
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
-  color: #929292;
+  color: #263959;
 }
 
 .post .post-content p {
@@ -1223,7 +1222,7 @@ a.newer-posts:hover {
   padding: 0;
   margin: 0;
   max-height: 500px;
-  background-color: #333030;
+  background-color: #fafafa;
   overflow: hidden;
 }
 
@@ -1274,7 +1273,7 @@ a.newer-posts:hover {
 .page-footer .page-share a {
   display: inline-block;
   text-decoration: none;
-  background-color: #333030;
+  background-color: #fafafa;
   border: 1px solid #ecf0f1;
   padding: 5px 10px;
   margin-left: 5px;
@@ -1290,7 +1289,7 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-share a:hover {
-  background-color: #fafafa;
+  background-color: #ecf0f1;
 }
 
 .page-footer .page-tag a {
@@ -1298,7 +1297,7 @@ a.newer-posts:hover {
   font-size: 10px;
   padding: 5px 10px;
   margin-left: 5px;
-  color: #93b6f0;
+  color: #263959;
   text-transform: uppercase;
   border: 1px solid #263959;
 }
@@ -1310,7 +1309,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {
   width: 100%;
-  background-color: #333030;
+  background-color: #ffffff;
   padding: 0 20px 20px;
 }
 
@@ -1318,11 +1317,11 @@ a.newer-posts:hover {
   font-size: 30px;
   text-align: center;
   line-height: 1.3;
-  color: #fafafa;
+  color: #263959;
 }
 
 .blog-tags h2 {
-  color: #fafafa;
+  color: #263959;
   margin: 10px 0;
 }
 
@@ -1339,11 +1338,11 @@ a.newer-posts:hover {
 
 .tags li a {
   text-decoration: none;
-  color: #fafafa;
+  color: #263959;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ecf0f1;
-  background-color: #333030;
+  background-color: #fafafa;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -1355,7 +1354,7 @@ a.newer-posts:hover {
 
 .tag-list span a {
   text-decoration: none;
-  color: #fafafa;
+  color: #263959;
 }
 
 .tag-list span a:hover {
@@ -1409,7 +1408,7 @@ a.newer-posts:hover {
             justify-content: space-between;
     width: 100%;
     padding: 10px;
-    background-color: #333030;
+    background-color: #ffffff;
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   }
