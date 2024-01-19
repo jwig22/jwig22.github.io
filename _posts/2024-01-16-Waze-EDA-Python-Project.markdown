@@ -106,8 +106,7 @@ It's always helpful to have this information at the beginning of a project, wher
 ``` python
 df.head()
 ```
-<div>
-<table >
+
 | ID | label    | sessions | drives | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days | device  |
 |----|----------|----------|--------|----------------|-------------------------|------------------------|------------------------|------------------|-------------------------|---------------|--------------|---------|
 | 0  | retained | 283      | 226    | 296.748273     | 2276                    | 208                    | 0                      | 2628.845068      | 1985.775061             | 28            | 19           | Android |
