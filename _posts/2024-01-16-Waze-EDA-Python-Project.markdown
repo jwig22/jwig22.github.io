@@ -106,15 +106,102 @@ It's always helpful to have this information at the beginning of a project, wher
 ``` python
 df.head()
 ```
-
-| ID | label    | sessions | drives | total_sessions | n_days_after_onboarding | total_navigations_fav1 | total_navigations_fav2 | driven_km_drives | duration_minutes_drives | activity_days | driving_days | device  |
-|----|----------|----------|--------|----------------|-------------------------|------------------------|------------------------|------------------|-------------------------|---------------|--------------|---------|
-| 0  | retained | 283      | 226    | 296.748273     | 2276                    | 208                    | 0                      | 2628.845068      | 1985.775061             | 28            | 19           | Android |
-| 1  | retained | 133      | 107    | 326.896596     | 1225                    | 19                     | 64                     | 13715.920550     | 3160.472914             | 13            | 11           | iPhone  |
-| 2  | retained | 114      | 95     | 135.522926     | 2651                    | 0                      | 0                      | 3059.148818      | 1610.735904             | 14            | 8            | Android |
-| 3  | retained | 49       | 40     | 67.589221      | 15                      | 322                    | 7                      | 913.591123       | 587.196542              | 7             | 3            | iPhone  |
-| 4  | retained | 84       | 68     | 168.247020     | 1562                    | 166                    | 5                      | 3950.202008      | 1219.555924             | 27            | 18           | Android |
-
+<table overflow: auto>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>label</th>
+      <th>sessions</th>
+      <th>drives</th>
+      <th>total_sessions</th>
+      <th>n_days_after_onboarding</th>
+      <th>total_navigations_fav1</th>
+      <th>total_navigations_fav2</th>
+      <th>driven_km_drives</th>
+      <th>duration_minutes_drives</th>
+      <th>activity_days</th>
+      <th>driving_days</th>
+      <th>device</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>retained</td>
+      <td>283</td>
+      <td>226</td>
+      <td>296.748273</td>
+      <td>2276</td>
+      <td>208</td>
+      <td>0</td>
+      <td>2628.845068</td>
+      <td>1985.775061</td>
+      <td>28</td>
+      <td>19</td>
+      <td>Android</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>retained</td>
+      <td>133</td>
+      <td>107</td>
+      <td>326.896596</td>
+      <td>1225</td>
+      <td>19</td>
+      <td>64</td>
+      <td>13715.920550</td>
+      <td>3160.472914</td>
+      <td>13</td>
+      <td>11</td>
+      <td>iPhone</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>retained</td>
+      <td>114</td>
+      <td>95</td>
+      <td>135.522926</td>
+      <td>2651</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3059.148818</td>
+      <td>1610.735904</td>
+      <td>14</td>
+      <td>8</td>
+      <td>Android</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>retained</td>
+      <td>49</td>
+      <td>40</td>
+      <td>67.589221</td>
+      <td>15</td>
+      <td>322</td>
+      <td>7</td>
+      <td>913.591123</td>
+      <td>587.196542</td>
+      <td>7</td>
+      <td>3</td>
+      <td>iPhone</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>retained</td>
+      <td>84</td>
+      <td>68</td>
+      <td>168.247020</td>
+      <td>1562</td>
+      <td>166</td>
+      <td>5</td>
+      <td>3950.202008</td>
+      <td>1219.555924</td>
+      <td>27</td>
+      <td>18</td>
+      <td>Android</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
