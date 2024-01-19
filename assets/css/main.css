@@ -833,7 +833,7 @@ table {
   background-color: #eee;
   text-align: left;
   display: block;
-  max-width: 100%;
+  max-width: 992px;
   margin: 0 auto;
   overflow-x: scroll;
   white-space: nowrap;
