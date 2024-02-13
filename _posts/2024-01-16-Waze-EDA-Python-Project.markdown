@@ -1,36 +1,29 @@
 ---
 layout: post
-title: "Waze EDA Python Project"
+title: "Waze EDA Python Project Report"
 date: 2024-01-15 13:32:20 +0300
 description: Waze EDA using Python with Pandas, Matplotlib, and Seaborn in a Jupyter Notebook.
 img: output_65_0.png # Add image post (optional)
 ---
 
-# **Waze Project**
+# **Waze EDA Project Report**
 **Google Advanced Data Analytics Course (Python EDA)**
 
-Your team is still in the early stages of their user churn project. So far, you’ve completed a project proposal and used Python to inspect and organize Waze’s user data.
+## **Introduction**
 
-You check your inbox and notice a new message from Chidi Ga, your team’s Senior Data Analyst. Chidi is pleased with the work you have already completed and requests your assistance with exploratory data analysis (EDA) and further data visualization. Harriet Hadzic, Waze's Director of Data Analysis, will want to review a Python notebook that shows your data exploration and visualization.
+As part of the ongoing effort at Waze to better understand user churn, this report outlines the Exploratory Data Analysis - including the Data Cleaning performed, Data Visualizations, and Evaluation & Results.
 
 # **Exploratory data analysis**
 
-In this activity, you will examine data provided and prepare it for analysis.
-<br/>
-
 **The purpose** of this project is to conduct exploratory data analysis (EDA) on a provided dataset.
 
-**The goal** is to continue the examination of the data that you began in the previous Course, adding relevant visualizations that help communicate the story that the data tells.
-<br/>
+**The goal** is to continue the examination of the data, adding relevant visualizations that help communicate the story that the data tells.
 
-
-*This activity has 4 parts:*
+*This report includes 4 parts:*
 
 **Part 1:** Imports, links, and loading
 
-**Part 2:** Data Exploration
-*   Data cleaning
-
+**Part 2:** Data Exploration & Data cleaning
 
 **Part 3:** Building visualizations
 
@@ -40,10 +33,9 @@ In this activity, you will examine data provided and prepare it for analysis.
 
 # **Visualize a story in Python**
 
-### **Task 1. Imports and data loading**
+### **Part 1. Imports and data loading**
 
-For EDA of the data, import the data and packages that will be most helpful, such as pandas, numpy, and matplotlib.
-
+For EDA of the data, the following code was used to import the necessary libraries:
 
 ``` python
 # Import libraries
@@ -56,52 +48,22 @@ import datetime as dt
 
 Read in the data and store it as a dataframe object called df.
 
-**Note:** As shown in this cell, the dataset has been automatically loaded in for you. You do not need to download the .csv file, or provide more code, in order to access the dataset and proceed with this lab. Please continue with this activity by completing the following instructions.
-
-
 ``` python
 # Load the dataset into a dataframe
 df = pd.read_csv('waze_dataset.csv')
 ```
 
-1. Does the data need to be restructured or converted into usable formats?
-
-2. Are there any variables that have missing data?
-
-Answers:
 1. The data is in a useable format and does not need to be restructured.
 2. The labels variable is missing 700 values.
 
 ### **Task 2. Data exploration and cleaning**
 
-Consider the following questions:
-
-
-1.  Given the scenario, which data columns are most applicable?
-
-2.  Which data columns can you eliminate, knowing they won’t solve your problem scenario?
-
-3.  How would you check for missing data? And how would you handle missing data (if any)?
-
-4.  How would you check for outliers? And how would handle outliers (if any)?
-
-Answers:
 1. The most applicable data columns are label, sessions, drives, n_days_after_onboarding, driven_km_drives,duration_minutes_drives, activity_days, driving_days, and maybe device.
 2. The total_navigations_fav1/2 propbably aren't very useful for right now.
-3. Using df.info() can indicated missing or null values. The missing data can either be removed, ignored, or filled in with estimates or calculated values.
+3. Using df.info() can indicate missing or null values. The missing data can either be removed, ignored, or filled in with estimates or calculated values.
 4. Using statistical analysis, outliers can be identified and determine if they are anomalies, errors, or something worth exploring further.
 
 #### **Data overview and summary statistics**
-
-Use the following methods and attributes on the dataframe:
-
-* head()
-* size
-* describe()
-* info()
-
-It's always helpful to have this information at the beginning of a project, where you can always refer back to if needed.
-
 
 ``` python
 df.head()
@@ -210,10 +172,6 @@ df.head()
 ``` python
 df.size
 ```
-
-
-
-
     194987
 
 
@@ -270,36 +228,14 @@ df.info()
     memory usage: 1.5+ MB
 
 
-Consider the following questions as you prepare to deal with outliers:
-
-1.   What are some ways to identify outliers?
-2.   How do you make the decision to keep or exclude outliers from any future models?
-
-Answers:
+Dealing with outliers:
 1. Checking Mins, Maxes, mean vs median, box plots, and other visualizations.
-2. By determining if it actually makes sense (input error vs anomaly).
+2. Keep outliers by determining if they actually make sense to include (input error vs anomaly).
 
 ### **Task 3a. Visualizations**
 
-Select data visualization types that will help you understand and explain the data.
+Box plots, Histograms, bar charts, maybe heat maps.
 
-Now that you know which data columns you’ll use, it is time to decide which data visualization makes the most sense for EDA of the Waze dataset.
-
-**Question:** What type of data visualization(s) will be most helpful?
-
-* Line graph
-* Bar chart
-* Box plot
-* Histogram
-* Heat map
-* Scatter plot
-* A geographic map
-
-
-
-Box plots, Histograms, bar charts, may be heat maps.
-
-Begin by examining the spread and distribution of important variables using box plots and histograms.
 
 #### **`sessions`**
 
@@ -312,10 +248,6 @@ sns.boxplot(data=df,
            y="sessions")
 
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f30ac0d0>
 
 
@@ -352,10 +284,6 @@ _An occurrence of driving at least 1 km during the month_
 sns.boxplot(data=df,
            y="drives")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f2a47550>
 
 
@@ -404,10 +332,6 @@ _A model estimate of the total number of sessions since a user has onboarded_
 sns.boxplot(data=df,
            y="total_sessions")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f2948710>
 
 
@@ -438,10 +362,6 @@ _The number of days since a user signed up for the app_
 sns.boxplot(data=df,
            y="n_days_after_onboarding")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f26404d0>
 
 
@@ -476,10 +396,6 @@ _Total kilometers driven during the month_
 sns.boxplot(data=df,
            y="driven_km_drives")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f2502290>
 
 
@@ -510,10 +426,6 @@ _Total duration driven in minutes during the month_
 sns.boxplot(data=df,
            y="duration_minutes_drives")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f26fbbd0>
 
 
@@ -544,10 +456,6 @@ _Number of days the user opens the app during the month_
 sns.boxplot(data=df,
            y="activity_days")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f26d9d90>
 
 
@@ -583,10 +491,6 @@ _Number of days the user drives (at least 1 km) during the month_
 sns.boxplot(data=df,
            y="driving_days")
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f2751950>
 
 
@@ -616,9 +520,6 @@ However, there were almost twice as many users (\~1,000 vs. \~550) who did not d
 
 _The type of device a user starts a session with_
 
-This is a categorical variable, so you do not plot a box plot for it. A good plot for a binary categorical variable is a pie chart.
-
-
 ``` python
 # Pie chart
 fig, ax = plt.subplots()
@@ -638,8 +539,6 @@ There are nearly twice as many iPhone users as Android users represented in this
 #### **`label`**
 
 _Binary target variable (“retained” vs “churned”) for if a user has churned anytime during the course of the month_
-
-This is also a categorical variable, and as such would not be plotted as a box plot. Plot a pie chart instead.
 
 
 ``` python
@@ -662,8 +561,6 @@ Less than 18% of the users churned.
 
 Because both `driving_days` and `activity_days` represent counts of days over a month and they're also closely related, you can plot them together on a single histogram. This will help to better understand how they relate to each other without having to scroll back and forth comparing histograms in two different places.
 
-Plot a histogram that, for each day, has a bar representing the counts of `driving_days` and `activity_days`.
-
 
 ``` python
 # Histogram
@@ -674,10 +571,6 @@ sns.histplot([df.driving_days, df.activity_days],
              multiple='dodge',
              shrink=.8)
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f29df210>
 
 
@@ -718,10 +611,6 @@ sns.scatterplot(data=df,
 plt.title('driving_days vs activity_days')
 plt.plot([0,31],[0,31],color='red')
 ```
-
-
-
-
     [<matplotlib.lines.Line2D at 0x7f41f26c5dd0>]
 
 
@@ -734,8 +623,6 @@ Notice that there is a theoretical limit. If you use the app to drive, then by d
 
 #### **Retention by device**
 
-Plot a histogram that has four bars&mdash;one for each device-label combination&mdash;to show how many iPhone users were retained/churned and how many Android users were retained/churned.
-
 
 ``` python
 # Histogram
@@ -746,10 +633,6 @@ sns.histplot(data=df,
              multiple='dodge',
             shrink=0.9)
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f27088d0>
 
 
@@ -762,11 +645,8 @@ The proportion of churned users to retained users is consistent between device t
 
 #### **Retention by kilometers driven per driving day**
 
-In the previous course, you discovered that the median distance driven last month for users who churned was 8.33 km, versus 3.36 km for people who did not churn. Examine this further.
+In a previous examination, I discovered that the median distance driven last month for users who churned was 8.33 km, versus 3.36 km for people who did not churn. I want to examine this further.
 
-1. Create a new column in `df` called `km_per_driving_day`, which represents the mean distance driven per driving day for each user.
-
-2. Call the `describe()` method on the new column.
 
 
 ``` python
@@ -775,9 +655,6 @@ df['km_per_driving_day'] = (df.driven_km_drives / df.driving_days).round(3)
 # 2. Call `describe()` on the new column
 df['km_per_driving_day'].describe().round(2)
 ```
-
-
-
 
     count    14999.00
     mean          inf
@@ -791,14 +668,9 @@ df['km_per_driving_day'].describe().round(2)
 
 
 
-What do you notice? The mean value is infinity, the standard deviation is NaN, and the max value is infinity. Why do you think this is?
+The mean value is infinity, the standard deviation is NaN, and the max value is infinity. 
 
-This is the result of there being values of zero in the `driving_days` column. Pandas imputes a value of infinity in the corresponding rows of the new column because division by zero is undefined.
-
-1. Convert these values from infinity to zero. You can use `np.inf` to refer to a value of infinity.
-
-2. Call `describe()` on the `km_per_driving_day` column to verify that it worked.
-
+This is the result of there being values of zero in the `driving_days` column. Let's convert these values from infinity to zero.
 
 ``` python
 # 1. Convert infinite values to zero
@@ -824,7 +696,7 @@ df.km_per_driving_day.describe().round(2)
 
 The maximum value is 15,420 kilometers _per drive day_. This is physically impossible. Driving 100 km/hour for 12 hours is 1,200 km. It's unlikely many people averaged more than this each day they drove, so, for now, disregard rows where the distance in this column is greater than 1,200 km.
 
-Plot a histogram of the new `km_per_driving_day` column, disregarding those users with values greater than 1,200 km. Each bar should be the same length and have two colors, one color representing the percent of the users in that bar that churned and the other representing the percent that were retained. This can be done by setting the `multiple` parameter of seaborn's [`histplot()`](https://seaborn.pydata.org/generated/seaborn.histplot.html) function to `fill`.
+Below is a histogram of the new `km_per_driving_day` column, disregarding those users with values greater than 1,200 km. 
 
 
 ``` python
@@ -836,10 +708,6 @@ sns.histplot(data=df,
              hue='label',
              multiple='fill')
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f5d21d10>
 
 
@@ -852,8 +720,6 @@ The churn rate tends to increase as the mean daily distance driven increases, co
 
 #### **Churn rate per number of driving days**
 
-Create another histogram just like the previous one, only this time it should represent the churn rate for each number of driving days.
-
 
 ``` python
 # Histogram
@@ -864,10 +730,6 @@ sns.histplot(df,
              multiple='fill',
              discrete=True)
 ```
-
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x7f41f2154e10>
 
 
@@ -882,7 +744,7 @@ This isn't surprising. If people who used the app a lot churned, it would likely
 
 #### **Proportion of sessions that occurred in the last month**
 
-Create a new column `percent_sessions_in_last_month` that represents the percentage of each user's total sessions that were logged in their last month of use.
+Let's create a new column `percent_sessions_in_last_month` that represents the percentage of each user's total sessions that were logged in their last month of use.
 
 
 ``` python
@@ -895,15 +757,11 @@ What is the median value of the new column?
 ``` python
 df.percent_sessions_in_last_month.median()
 ```
-
-
-
-
     42.31
 
 
 
-Now, create a histogram depicting the distribution of values in this new column.
+Now, let's see a histogram depicting the distribution of values in this new column.
 
 
 ``` python
@@ -927,17 +785,13 @@ Check the median value of the `n_days_after_onboarding` variable.
 ``` python
 df.n_days_after_onboarding.median()
 ```
-
-
-
-
     1741.0
 
 
 
 Half of the people in the dataset had 40% or more of their sessions in just the last month, yet the overall median time since onboarding is almost five years.
 
-Make a histogram of `n_days_after_onboarding` for just the people who had 40% or more of their total sessions in the last month.
+Here's a histogram of `n_days_after_onboarding` for just the people who had 40% or more of their total sessions in the last month.
 
 
 ``` python
@@ -947,10 +801,6 @@ sns.histplot(data=df[df['percent_sessions_in_last_month']>=40],
             x='n_days_after_onboarding')
 plt.title('N Days after Onboarding\n(only users with 40% or greater session in the last month)')
 ```
-
-
-
-
     Text(0.5, 1.0, 'N Days after Onboarding\n(only users with 40% or greater session in the last month)')
 
 
@@ -967,9 +817,7 @@ The box plots from the previous section indicated that many of these variables h
 
 Depending on what you'll be doing with this data, it may be useful to impute outlying data with more reasonable values. One way of performing this imputation is to set a threshold based on a percentile of the distribution.
 
-To practice this technique, write a function that calculates the 95th percentile of a given column, then imputes values > the 95th percentile with the value at the 95th percentile.  such as the 95th percentile of the distribution.
-
-
+To employ this technique, below is a function that calculates the 95th percentile of a given column, then imputes values > the 95th percentile with the value at the 95th percentile.  such as the 95th percentile of the distribution.
 
 
 ``` python
@@ -979,7 +827,7 @@ def impute_95(column_name):
     return col_name_95
 ```
 
-Next, apply that function to the following columns:
+Next, I will apply that function to the following columns:
 * sessions
 * drives
 * total_sessions
@@ -992,9 +840,6 @@ col_list = ['sessions','drives','total_sessions','driven_km_drives','duration_mi
 for col in col_list:
     df[col] = impute_95(df[col])
 ```
-
-Call `describe()` to see if your change worked.
-
 
 ``` python
 df.describe()
@@ -1018,36 +863,20 @@ df.describe()
 
 #### **Conclusion**
 
-Analysis revealed that the overall churn rate is \~17%, and that this rate is consistent between iPhone users and Android users.
+Analysis revealed that the overall churn rate is \~18%, and that this rate is consistent between iPhone users and Android users.
 
-Perhaps you feel that the more deeply you explore the data, the more questions arise. This is not uncommon! In this case, it's worth asking the Waze data team why so many users used the app so much in just the last month.
 
 Also, EDA has revealed that users who drive very long distances on their driving days are _more_ likely to churn, but users who drive more often are _less_ likely to churn. The reason for this discrepancy is an opportunity for further investigation, and it would be something else to ask the Waze data team about.
 
 
 ### **Task 4a. Results and evaluation**
 
-Having built visualizations in Python, what have you learned about the dataset? What other questions have your visualizations uncovered that you should pursue?
-
-**Pro tip:** Put yourself in your client's perspective. What would they want to know?
-
-Use the following code fields to pursue any additional EDA based on the visualizations you've already plotted. Also use the space to make sure your visualizations are clean, easily understandable, and accessible.
-
-**Ask yourself:** Did you consider color, contrast, emphasis, and labeling?
-
-
-
 I have learned that device type is not a factor in user churn, but that 64% of users are using iPhones. 
 
 My other questions are: Why was there so much usage by all users in just the last month? Do the minutes driven and km driven last month make sense on the high end? Are they long haulers testing out the app for a promotion?
 
-My client would likely want to know 
 
-
-
-
-Use the following two code blocks (add more blocks if you like) to do additional EDA you feel is important based on the given scenario.
-
+Some additional plots I thought of to explore these questions and others are below: 
 
 ``` python
 plt.figure(figsize=(4,3))
@@ -1088,26 +917,12 @@ sns.scatterplot(data=df,
 
 ### **Task 4b. Conclusion**
 
-Now that you've explored and visualized your data, the next step is to share your findings with Harriet Hadzic, Waze's Director of Data Analysis. Consider the following questions as you prepare to write your executive summary. Think about key points you may want to share with the team, and what information is most relevant to the user churn project.
 
-**Questions:**
+**Key Learnings and Obvervations**
 
-1. What types of distributions did you notice in the variables? What did this tell you about the data?
-
-2. Was there anything that led you to believe the data was erroneous or problematic in any way?
-
-3. Did your investigation give rise to further questions that you would like to explore or ask the Waze team about?
-
-4. What percentage of users churned and what percentage were retained?
-
-5. What factors correlated with user churn? How?
-
-6. Did newer uses have greater representation in this dataset than users with longer tenure? How do you know?
-
-Answers:
-1. Mostly right tail skewed distributions, but some normal distributions of others. Normal driving habits (drive distance and drive times) are generally in shorter ranges tend to go together.
+1. Most of the distributions were right tail skewed distributions, but some normal distributions of others. Normal driving habits (drive distance and drive times) are generally in shorter ranges tend to go together.
 2. The large amount of outliers and scatter plots indicate a major problem with this dataset.
-3. Yes. What the heck is going on with this dataset?
+3. Much of what I found in this EDA raised more questions than answered.
 4. 18% of users churned and 82% were retained.
 5. Fewer driving days correlated with increased user churn. Longer drives also tended to correlate with increased churn.
 6. This dataset has about an equal representation among all tenure lengths due to the histogram of "n_days_after_onboarding" being a normal distribution.
