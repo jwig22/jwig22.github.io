@@ -9,7 +9,7 @@ url: "https://jwig22.github.io" # the base hostname & protocol for your site, e.
 # Author Settings
 author: Jeff Wigington # add your name
 author-img: Jeffrey-Wigington.jpg # add your photo
-about-author: I'm Jeff, a Mechnical Engineer moving into Data Science! I went into Engineering because of my aptitude in mathemathics and analyzing data. My background in Engineering and Robotics&mdash;including motion planning algorithms and machine learning in computer vision&mdash;gives me great overlapping skills for Data Science. Check out my side-projects! # add description
+about-author: I'm Jeff, a Mechnical Engineer moving into Data Science! I went into Engineering because of my aptitude in mathemathics and analyzing data, but didn't know about Data Science yet. My background in Engineering and Robotics&mdash;including motion planning algorithms and machine learning in computer vision&mdash;gives me great overlapping skills for Data Science. Check out my side-projects! # add description
 social-github: jwig22 # add your Github handle
 social-linkedin: jeffreywigington/ # add your Linkedin handle
 social-email: jwigington22@gmail.com # add your Email address
