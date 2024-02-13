@@ -7,9 +7,9 @@ url: "https://jwig22.github.io" # the base hostname & protocol for your site, e.
 # site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Jeffrey Wigington # add your name
+author: Jeff Wigington # add your name
 author-img: Jeffrey-Wigington.jpg # add your photo
-about-author: This site is currently under construction. # add description
+about-author: I switched from a Psychology Major to Mechanical Engineering because I was envious of my roommate's calculus homework. Engineering made sense as a practical career to employ my mathematical aptitudes. As much as I've enjoyed being a mechanical engineer, I've always been drawn to the data and analytical side of engineering. I found myself at home in the spreadsheets or MATLAB code to analyze engine test data, track engineering deviation request history, or visualize my team's progress in handling discrepancy reports. This has led me to Data Science as the next step in my career. My bigger projects are owned by the Government but some of the other projects and learnings I've done on my own time are here in my portfolio. Have a look and see what I've been up to! Thanks for being here! # add description
 social-github: jwig22 # add your Github handle
 social-linkedin: jeffreywigington/ # add your Linkedin handle
 social-email: jwigington22@gmail.com # add your Email address
