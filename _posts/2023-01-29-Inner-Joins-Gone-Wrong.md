@@ -12,4 +12,7 @@ While working on a guided project doing an inner join, I discovered a problem wi
 
 I wanted to share my learning with my cohort and anyone else who wants to understand how an inner join (applies to other joins as well) behaves with primary and non-primary keys with duplicate values. The PDF below walks you through examples of the behavior of inner joins with unique values and duplicate values. 
 
+<!--
 <object data="../assets/docs/inner-joins-gone-wrong.pdf" width="700" height="750" type='application/pdf'></object>
+-->
+<iframe width="100%" height="800" src="p../assets/docs/inner-joins-gone-wrong.pdf">
